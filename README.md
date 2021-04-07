@@ -37,9 +37,9 @@ The error says that it is not the native runtime environment of OpenCL that is u
 ```
 .\hashcat.exe --force
 ```
-Masking attack: To crack the password from the hash, I created a mask consisting of eight characters, each of which is a small letter, begining with upper case. This is the mask: ?u?l?l?l?l?l?l?l
+Masking attack: To crack the password from the hash, I created a mask consisting of eight characters, each of which is a small letter, begining with upper case and ending with 4 numbers. This is the mask: ?u?l?l?d?d?l?d?d
 ```
-.\hashcat.exe -m 0 -a 3 [path to password_dump.txt] ?u?l?l?l?l?l?l?l
+.\hashcat.exe -m 0 -a 3 [path to password_dump.txt] ?u?l?l?d?d?l?d?d
 ```
 Dictionay attack:There are 4 arguments in the command used to crack the password. Below is the breakdown of the command.
 
@@ -75,18 +75,20 @@ In the example, I used “-m 0” which is for MD5.
  ```
 [filename]
 Specifies the path of the file containing the hash(es) you intend to crack
-In the example I have used “password_dump.txt".
+In the example I have used “./password_dump.txt".
 
 ```
 ```
 [dictionary | mask | directory]
 Specifies the dictionary(wordlist), mask, or directory to be used.
-In the example, we will use “./passwd.txt”
+In the example, I used “./passwd.txt”
 ```
-Now a brilliant in-built feature of Hashcat appends all the cracked passwords in a potfile which you can see in the directory.It does making the cracking more efficient and provide higher performance 
+The key of effective cracking here is to use a long and up-to-date wordlist. Here I have used some lists from https://github.com/danielmiessler/SecLists
 
-Result page will usually looks like this, with "Cracked" on the status and details of the attack:
+Now a brilliant in-built feature of Hashcat appends all the cracked passwords in a potfile which you can see in the directory. It does making the cracking more efficient and provide higher performance 
 
+Result page will usually looks like this, with "Cracked" on the status and details of the hashes:
+![hashcat](https://github.com/AbbyXSu/Crack_leaked_password_database_Goldman_Sachs/blob/main/cracked%20-%20Copy.PNG?raw=true)
 
 ### Evaluation and Recommendation 
 
@@ -104,6 +106,8 @@ The UK GDPR introduces a duty on all organisations to report certain personal da
 2.	On application level - Set minimum password length (16+) with restrict password reuse and complex passwords rules(using special character, space and upper/lowercase) 
 3.	Set minimum and maximum password age limits to let user change password frequently to avoid possibility of password being breached after long period of time
 4.	Two- Factor Authentication (2FA) to pair with a strong password policy.
+
+
 
 
 
