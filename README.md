@@ -10,7 +10,7 @@
 ### Finding:
 ![decoded MD5 password.PNG](https://github.com/AbbyXSu/Crack_leaked_password_database_Goldman_Sachs/blob/main/decoded%20MD5%20password.PNG?raw=true)
 
--	The above graph shows the result of the cracked passwords in the database, majority of the password was cracked almost immediately using Dictionary attack based on the wildly shared leaked password database online. The remainder of the passwords were cracked within 1 Hour using Combinator attack and Mask attack with Hashcat.
+-	The above graph shows the result of the cracked passwords in the database, majority of the password was cracked almost immediately using Dictionary attack based on the breached password database online. The remainder of the passwords were cracked within 1 Hour using Combinator attack and Mask attack with Hashcat.
 -	The type of hashing algorithm was used to protect passwords in this organisation is MD5. 
 -	The level of protection of MD5 mechanism offer for the passwords is average. However, it should be noted that it is widely acknowledged that MD5 has been cryptographically broken and considered insecure. Under the situation where if the password database is leaked, passwords encrypted using MD5 could be cracked very quickly using the right tools and CPU setup.
 
