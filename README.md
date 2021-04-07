@@ -41,7 +41,7 @@ Masking attack: To crack the password from the hash, I created a mask consisting
 ```
 .\hashcat.exe -m 0 -a 3 [path to password_dump.txt] ?u?l?l?d?d?l?d?d
 ```
-Dictionay attack:There are 4 arguments in the command used to crack the password. Below is the breakdown of the command.
+Dictionary attack:There are 4 arguments in the command used to crack the password. Below is the breakdown of the command.
 
 ```
 ./hashcat.exe -m 0 -a 0  ./passwd_dump.txt ./passwd.txt
