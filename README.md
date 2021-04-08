@@ -1,5 +1,5 @@
 # Crack Leaked Password Database 
-### - A Task from Goldman Sachs Vitual Engineering Program
+###  A Task from Goldman Sachs Vitual Engineering Program
 
 ### Objective: 
 -	To attempt attacks and crack as many passwords as possible in the database using Hashcat
