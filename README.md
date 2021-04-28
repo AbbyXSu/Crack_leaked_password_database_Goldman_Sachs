@@ -108,7 +108,8 @@ The UK GDPR introduces a duty on all organisations to report certain personal da
 4.	Two- Factor Authentication (2FA) to pair with a strong password policy.
 
 
-
+### Author 
+Abby X Su
 
 
 
